@@ -11,7 +11,7 @@
 
     <h1><?=$page?></h1>
 
-    <h2><?=$movie['titre']?></h2>
+    <h2><?=$film['titre']?></h2>
     
 </body>
 </html>

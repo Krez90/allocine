@@ -3,29 +3,28 @@
 //Le modèle contient toutes les fonctions d'appel à la base de données.
 
 
-$dbh = new PDO('mysql:host=localhost;dbname=films', 'root', 'L0Z8E9kF');
+$dbh = new PDO('mysql:host=localhost;dbname=allocine;charset=utf8','root', '');
 
-function getAllMovies() {
+function getAllfilm() {
     global $dbh;
 
-    $movies = $dbh->query('SELECT * FROM movies');
+    $film = $dbh->query('SELECT * FROM film');
 
-    return $movies->fetchAll();
-
+    return $film->fetchAll();
 }
 
-function getOneMovie($id) {
+function getOnefilm($id) {
     global $dbh;
 
-    $movies = $dbh->query('SELECT * FROM movies WHERE id='.$id.';');
+    $film = $dbh->query('SELECT * FROM film WHERE id='.$id.';');
 
-    return $movies->fetch();
+    return $film->fetch();
 }
 
-function getMoviesByGenre($gender_id) {
+function getfilmByGenre($genre_id) {
     global $dbh;
 
-    $movies = $dbh->query('SELECT * FROM movies WHERE gender_id='.$gender_id.';');
+    $film = $dbh->query('SELECT * FROM film WHERE genre_id='.$genre_id.';');
 
-    return $movies->fetchAll();
+    return $film->fetchAll();
 }

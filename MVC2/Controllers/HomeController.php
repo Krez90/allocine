@@ -6,12 +6,12 @@ include('Models/Film.php');
 
 
 //Récupérer les données (ici, tous les films car on est sur la home)
-$movies = getAllMovies();
+$film = getAllfilm();
 
 //traiter les données
-foreach ($movies as $key => $movie) {
-    $movie['realisateur'] = ucfirst($movie['realisateur']); //Mets une majuscule au nom du réalisateur
-}
+// foreach ($film as $key => $film) {
+//     $film['realisateur'] = ucfirst($film['realisateur']); //Mets une majuscule au nom du réalisateur
+// }
 
 //inclure la vue
 include('Views/HomeView.php');
