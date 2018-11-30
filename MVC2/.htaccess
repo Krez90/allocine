@@ -3,7 +3,10 @@
 #toutes les requêtes passent donc par le routeur : index.php qui se charge d'appeler le bon controlleur.
 
 RewriteEngine on
-RewriteBase /MVC2/
+
+#RewriteBase /FilmProjet/allocineGroupe/allocine/MVC2/
+
 RewriteCond  %{REQUEST_FILENAME} !-f
 RewriteCond  %{REQUEST_FILENAME} !-d
-RewriteRule ^(.*)$ index.php?page=$1 [NC,L,QSA]
+RewriteRule ^(home)$ index.php?page=$1 [NC,L,QSA]
+RewriteRule ^(film)/([0-9]+)$ index.php?page=$1&id=$2 [NC,L,QSA]
