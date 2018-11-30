@@ -1,30 +1,19 @@
 <?php
+include('Models/bdd.php');
 
-//Le modèle contient toutes les fonctions d'appel à la base de données.
-
-
-$dbh = new PDO('mysql:host=localhost;dbname=allocine;charset=utf8','root', '');
-
-function getAllfilm() {
-    global $dbh;
-
-    $film = $dbh->query('SELECT * FROM film');
-
+function getAllFilm() {
+    global $bdd;
+    $film = $bdd->query('SELECT * 
+                         FROM film');
     return $film->fetchAll();
-}
+}//$film = tous les films
 
-function getOnefilm($id) {
-    global $dbh;
-
-    $film = $dbh->query('SELECT * FROM film WHERE id='.$id.';');
-
+function getOneFilm($id) {
+    global $bdd;
+    $film = $bdd->query('SELECT * 
+                         FROM film 
+                         WHERE id='.$id.';');
     return $film->fetch();
-}
+}//$film = 1 film
 
-function getfilmByGenre($genre_id) {
-    global $dbh;
-
-    $film = $dbh->query('SELECT * FROM film WHERE genre_id='.$genre_id.';');
-
-    return $film->fetchAll();
-}
+?>

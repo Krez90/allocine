@@ -1,31 +1,27 @@
 <?php
+include('Models/bdd.php');
 
-//Le modèle contient toutes les fonctions d'appel à la base de données.
-
-
-$dbh = new PDO('mysql:host=localhost;dbname=allocine', 'root', '');
-
-function getAllgenre() {
-    global $dbh;
-
-    $genre = $dbh->query('SELECT * FROM genre');
-
+function getAllGenre() {
+    global $bdd;
+    $genre = $bdd->query('SELECT * 
+                          FROM genre');
     return $genre->fetchAll();
+}//$genre = tous les genres
 
-}
-
-function getOnegenre($id) {
-    global $dbh;
-
-    $genre = $dbh->query('SELECT * FROM genre WHERE id='.$id.';');
-
+function getOneGenre($id) {
+    global $bdd;
+    $genre = $bdd->query('SELECT * 
+                          FROM genre 
+                          WHERE id='.$id.';');
     return $genre->fetch();
-}
+}//$genre = un genre
 
-function getgenreBygenre($genre_id) {
-    global $dbh;
-
-    $genre = $dbh->query('SELECT * FROM genre WHERE genre_id='.$genre_id.';');
-
+function getFilmGenre($film_id) {
+    global $bdd;
+    $genre = $bdd->query('SELECT * 
+                          FROM genre 
+                          INNER JOIN genre_film ON id_film = '. $film_id .' 
+                          WHERE genre.id = genre_film.id_genre;');
     return $genre->fetchAll();
-}
+}//$genre = Tous les genres d'un film
+?>

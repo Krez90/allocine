@@ -1,33 +1,26 @@
 <?php
-// $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-// $dbh->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
-//Le modèle contient toutes les fonctions d'appel à la base de données.
+include('Models/bdd.php');
 
+function getAllRealisateur() {                                                                              // print_r(getAllrealisateur()); Commande pour echo la fonction getallrealisaeur
+    global $bdd;
+    $realisateur = $bdd->query('SELECT * FROM realisateur');
+    return $realisateur->fetchAll(); 
+}//$realisateur = tous les realisateurs
 
-$dbh = new PDO('mysql:host=localhost;dbname=allocine', 'root', '');
-
-function getAllrealisateur() {
-    global $dbh;
-
-    $realisateur = $dbh->query('SELECT * FROM realisateur');
-
-    return $realisateur->fetchAll();
-    
-}
-// print_r(getAllrealisateur()); Commande pour appeler la fonction getallrealisaeur
-
-function getOnerealisateur($id) {
-    global $dbh;
-
-    $realisateur = $dbh->query('SELECT * FROM realisateur WHERE id='.$id.';');
-
+function getOneRealisateur($id) {
+    global $bdd;
+    $realisateur = $bdd->query('SELECT * 
+                                FROM realisateur 
+                                WHERE id='.$id.';');
     return $realisateur->fetch();
-}
+}//$realisateur = Un realisateur
 
-function getrealisateurByrealisateur($realisateur_id) {
-    global $dbh;
-
-    $realisateur = $dbh->query('SELECT * FROM realisateur WHERE realisateur_id='.$realisateur_id.';');
-
+function getFilmRealisateur($film_id) {
+    global $bdd;
+    $realisateur = $bdd->query('SELECT * 
+                                FROM realisateur 
+                                INNER JOIN realisateur_film ON id_film = '. $film_id .' 
+                                WHERE realisateur.id = realisateur_film.id_realisateur;');
     return $realisateur->fetchAll();
-}
+}//$realisateur = Tous les realisateurs d'un film
+?>

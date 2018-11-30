@@ -1,19 +1,16 @@
 <?php
-
-//le controlleur inclut le ou les modèles
 include('Models/Film.php');
 include('Models/Genre.php');
+include('Models/Realisateur.php');
+include('Models/Nationalite.php');
+include('Models/Acteur.php');
 
+$id = $_GET['id'];                        //$id = id dans l'url                                               
+$film = getOneFilm($id);                  //$film = le film a cette id
+$genres = getFilmGenre($id);              //$genres = les genres du film
+$realisateurs = getFilmRealisateur($id);  //$realisateur = les realisateurs du film
+$nationalite = getOneNationalite($id);    //$realisateur = la nationalité du film
+$acteurs = getFilmActeur($id);            //$acteur = Les acteurs du film
 
-//Récupérer les données (ici, on est sur la page d'un film précis donc on récupère un seul film en fonction de l'ID)
-$id = 2; //Je prends un id arbitrairement, il devra provenir de l'URL en réalité (par ex localhost/MVC2/film/2 pour l'id 2)
-$film = getOnefilm($id);
-
-//traiter les données
-$film['realisateur'] = ucfirst($film['realisateur']); //Mets une majuscule au nom du réalisateur
-
-
-//inclure la vue
 include('Views/FilmView.php');
-
 ?>
