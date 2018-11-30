@@ -18,15 +18,22 @@
     <h3>
         Genre :
         <?php foreach ($genres as $genre){
-            echo $genre['genre'].'';
+            echo $genre['genre'].' ';
         }?>
     </h3>
     <h3>
         Nationalité : <?=$nationalite['nationalite']?>
     </h3>
     <h3>
+        Réalisateur : 
         <?php foreach ($realisateurs as $realisateur){
-            echo $realisateur['realisateur'];
+            echo $realisateur['realisateur'].' ';
+        }?>
+    </h3>
+    <h3>
+        Acteurs : 
+        <?php foreach ($acteurs as $acteur){
+            echo $acteur['acteur'].' ';
         }?>
     </h3>
     <p>
