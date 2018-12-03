@@ -5,37 +5,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Annuaire de films - <?=$page?></title>
-    <link rel="stylesheet" href="../Css/style.css">
+    <link rel="stylesheet" href="../Css/styleFilm.css">
 </head>
 <body>
     <h1>
         <?=$film['titre']?>
     </h1>
-    <img src="<?='../Css/image/'.$film['image']?>">
-    <h3>
-        Date De Sortie : <?=$film['date_de_sortie']?>
-    </h3>
-    <h3>
-        Genre :
-        <?php foreach ($genres as $genre){
-            echo $genre['genre'].' ';
-        }?>
-    </h3>
-    <h3>
-        Nationalité : <?=$nationalite['nationalite']?>
-    </h3>
-    <h3>
-        Réalisateur : 
-        <?php foreach ($realisateurs as $realisateur){
-            echo $realisateur['realisateur'].' ';
-        }?>
-    </h3>
-    <h3>
-        Acteurs : 
-        <?php foreach ($acteurs as $acteur){
-            echo $acteur['acteur'].' ';
-        }?>
-    </h3>
+    <div class="divCentrer">
+        <img src="<?='../Css/image/'.$film['image']?>">
+        <article>
+            <h3>
+                <div class='titre'>Date De Sortie :</div><?=$film['date_de_sortie']?>
+            </h3>
+            <h3>
+                <div class='titre'> Genre :</div>
+                <?php foreach ($genres as $genre){
+                    echo $genre['genre'].' ';
+                }?>
+            </h3>
+            <h3>
+                <div class='titre'>Nationalité :</div><?=$nationalite['nationalite']?>
+            </h3>
+            <h3>
+                <div class='titre'>Réalisateur :</div>
+                <?php foreach ($realisateurs as $realisateur){
+                    echo $realisateur['realisateur'].' ';
+                }?>
+            </h3>
+            <h3>
+                <div class='titre'>Acteurs :</div>
+                <?php foreach ($acteurs as $acteur){
+                    echo $acteur['acteur'].'<br>';
+                }?>
+            </h3>
+        </article>
+    </div>
     <p>
         <?=$film['description']?>
     </p>

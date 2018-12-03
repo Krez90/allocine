@@ -15,5 +15,4 @@ function getOneFilm($id) {
                          WHERE id='.$id.';');
     return $film->fetch();
 }//$film = 1 film
-
 ?>
