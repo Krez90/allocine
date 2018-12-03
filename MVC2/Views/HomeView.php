@@ -22,19 +22,27 @@
             
             <div class="slide">
                 <div class="carre1">
-                    <img class="image" src="css/image/avenger.jpg"> 
+                    <a href =" film/1">
+                        <img class="image" src="css/image/avenger.jpg"> 
+                    </a>
                 </div>
 
                 <div class="carre2">
-                    <img class="image" src="css/image/batman.jpg"> 
+                    <a href =" film/2">
+                        <img class="image" src="css/image/batman.jpg"> 
+                    </a>
                 </div>
 
                 <div class="carre3">
-                    <img class="image" src="css/image/django.jpg"> 
+                    <a href =" film/3">
+                        <img class="image" src="css/image/django.jpg"> 
+                    </a>
                 </div>
 
                 <div class="carre4">
-                    <img class="image" src="css/image/equalizer.jpg"> 
+                    <a href =" film/8">
+                        <img class="image" src="css/image/equalizer.jpg">
+                    </a>
                 </div>
             </div>
 
@@ -42,41 +50,57 @@
 
             <div class="slide">
                 <div class="carre1">
-                    <img class="image" src="css/image/harryPotter4.jpg"> 
+                    <a href =" film/6">
+                     <img class="image" src="css/image/harryPotter4.jpg"> 
+                    </a>
                 </div>
 
                 <div class="carre2">
-                    <img class="image" src="css/image/LaLigneVerte.jpg"> 
+                    <a href =" film/4">
+                        <img class="image" src="css/image/LaLigneVerte.jpg">
+                    </a> 
                 </div>
 
                 <div class="carre3">
-                    <img class="image" src="css/image/LaReineDesNeiges.jpg"> 
+                    <a href =" film/11">
+                        <img class="image" src="css/image/LaReineDesNeiges.jpg"> 
+                    </a>
                 </div>
 
                 <div class="carre4">
-                    <img class="image" src="css/image/leNombre23.jpg"> 
-                </div>
+                    <a href =" film/12">
+                        <img class="image" src="css/image/leNombre23.jpg"> 
+                    </a>        
+                 </div>
             </div>
 
         <!-- Slider 3 -->
 
         <div class="slide">
-                <div class="carre1">
+            <div class="carre1">
+                <a href =" film/7">
                     <img class="image" src="css/image/lesBronzes.jpg"> 
-                </div>
-
-                <div class="carre2">
-                    <img class="image" src="css/image/lordsOfWar.jpg"> 
-                </div>
-
-                <div class="carre3">
-                    <img class="image" src="css/image/missionImpossible.jpg"> 
-                </div>
-
-                <div class="carre4">
-                    <img class="image" src="css/image/pulpfiction.jpg"> 
-                </div>
+                </a>
             </div>
+
+            <div class="carre2">
+                <a href =" film/10">
+                    <img class="image" src="css/image/lordsOfWar.jpg"> 
+                </a>
+            </div>
+
+            <div class="carre3">
+                <a href =" film/9">
+                    <img class="image" src="css/image/missionImpossible.jpg"> 
+                </a>
+            </div>
+
+            <div class="carre4">
+                <a href =" film/5">
+                    <img class="image" src="css/image/pulpfiction.jpg"> 
+                </a>
+            </div>
+         </div>
 
             <!-- Slider 4 -->
 
