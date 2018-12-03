@@ -57,13 +57,13 @@
 
                 <div class="carre2">
                     <a href =" film/4">
-                        <img class="image" src="css/image/LaLigneVerte.jpg">
+                        <img class="image" src="css/image/laLigneVerte.jpg">
                     </a> 
                 </div>
 
                 <div class="carre3">
                     <a href =" film/11">
-                        <img class="image" src="css/image/LaReineDesNeiges.jpg"> 
+                        <img class="image" src="css/image/laReineDesNeiges.jpg"> 
                     </a>
                 </div>
 
@@ -97,7 +97,7 @@
 
             <div class="carre4">
                 <a href =" film/5">
-                    <img class="image" src="css/image/pulpfiction.jpg"> 
+                    <img class="image" src="css/image/pulpFiction.jpg"> 
                 </a>
             </div>
          </div>

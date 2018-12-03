@@ -1,10 +1,10 @@
 <?php
-include('Models/Film.php');
-include('Models/Genre.php');
-include('Models/Realisateur.php');
-include('Models/Nationalite.php');
-include('Models/Acteur.php');
-include('Models/Recompense.php');
+include('Models/film.php');
+include('Models/genre.php');
+include('Models/realisateur.php');
+include('Models/nationalite.php');
+include('Models/acteur.php');
+include('Models/recompense.php');
 
 $id = $_GET['id'];                        //$id = id dans l'url                                               
 $film = getOneFilm($id);                  //$film = le film a cette id

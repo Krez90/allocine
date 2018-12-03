@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Annuaire de films - <?=$page?></title>
-    <link rel="stylesheet" href="../Css/styleFilm.css">
+    <link rel="stylesheet" href="../css/styleFilm.css">
 </head>
 <body>
     <h1>
         <?=$film['titre']?>
     </h1>
     <div class="divCentrer">
-        <img src="<?='../Css/image/'.$film['image']?>">
+        <img src="<?='../css/image/'.$film['image']?>">
         <article>
             <h3>
                 <div class='titre'>Date De Sortie :</div><?=$film['date_de_sortie']?>

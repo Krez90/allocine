@@ -114,9 +114,10 @@ html, body {
     width: 0%; }
   100% {
     left: 100%;
-    width: 0%; } }
+    width: 0%; } 
+  }
     
-}
+
 .ecriture {
   color:white;
 }

@@ -1,3 +1,3 @@
 <?php
-$bdd = new PDO('mysql:host=localhost;dbname=allocine;charset=utf8','root', '');
+$bdd = new PDO('mysql:host=localhost;dbname=robinn_48484','robinn','ulL42KtSyyPE2A==');
 ?>

@@ -4,7 +4,7 @@
 
 RewriteEngine on
 
-#RewriteBase /FilmProjet/allocineGroupe/allocine/MVC2/
+RewriteBase /allocine/MVC2/
 
 RewriteCond  %{REQUEST_FILENAME} !-f
 RewriteCond  %{REQUEST_FILENAME} !-d

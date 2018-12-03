@@ -1,5 +1,5 @@
 <?php
-include('Models/Film.php');
+include('Models/film.php');
 
 $film = getAllFilm();                    
 
