@@ -9,13 +9,15 @@
 </head>
 
 <body>
-    <h1>
-        <?=$page?>
-    </h1>
-    <ul>
-        <?php foreach ($film as $film){ ?>                        
-           <?="<li><a href='film/" .$film['id']. "'>" .$film['titre']. "</a></li>" ?>
-        <?php } ?>
-    </ul>
+    <section>
+        <h1>
+            <?=$page?>
+        </h1>
+        <ul>
+            <?php foreach ($film as $film){ ?>                        
+            <?="<li><a href='film/" .$film['id']. "'>" .$film['titre']. "</a></li>" ?>
+            <?php } ?>
+        </ul>
+    </section>
 </body>
 </html>
