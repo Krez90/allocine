@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="../Css/styleFilm.css">
 </head>
 <body>
+    <div class="imgdessus"></div>
     <h1>
         <?=$film['titre']?>
     </h1>
@@ -34,8 +35,8 @@
             </h3>
             <h3>
                 <div class='titre'>Acteurs :</div>
-                <?php foreach ($acteurs as $acteur){
-                    echo $acteur['acteur'].'<br>';
+                  <?php foreach ($acteurs as $acteur){
+                            echo $acteur['acteur'].' '.'<br>';
                 }?>
             </h3>
         </article>
@@ -43,5 +44,6 @@
     <p>
         <?=$film['description']?>
     </p>
+    <div class="imgdessous"></div>
 </body>
 </html>
